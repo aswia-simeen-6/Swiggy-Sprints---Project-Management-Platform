@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class SpaForwardingController {
 
     @GetMapping(value = {
-            "/{path:^(?!api|ws|actuator|swagger-ui|api-docs|v3|health).*$}",
-            "/{path:^(?!api|ws|actuator|swagger-ui|api-docs|v3|health).*$}/**"
+            "/{path:^(?!api|ws|actuator|swagger-ui|api-docs|v3|health|assets).*$}",
+            "/{path:^(?!api|ws|actuator|swagger-ui|api-docs|v3|health|assets).*$}/**"
     })
     public ResponseEntity<?> forward() {
         Resource index = new ClassPathResource("static/index.html");
