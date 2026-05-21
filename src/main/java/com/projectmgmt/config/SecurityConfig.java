@@ -64,7 +64,10 @@ public class SecurityConfig {
                                 "/api-docs/**",
                                 "/v3/api-docs/**",
                                 "/ws/**",
-                                "/health"
+                                "/health",
+                                "/", "/index.html",
+                                "/assets/**", "/favicon.ico",
+                                "/*.js", "/*.css", "/*.png", "/*.svg", "/*.ico"
                         ).permitAll()
                         .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                         .anyRequest().authenticated())
